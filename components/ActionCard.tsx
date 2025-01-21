@@ -27,10 +27,11 @@ const ActionCard = () => {
               JavaScript is often used alongside HTML and CSS to build modern web applications.
             </Text>
            </View>
-           <View style={styles.SocialLinks}>
+           <View style={styles.footerBody}>
               <TouchableOpacity
-              onPress={()=>{openWebsite('https://developer.mozilla.org/en-US/docs/Web/JavaScript')}}>
-                <Text style={styles.footerBody}>Read More</Text>
+              onPress={()=>{openWebsite('https://developer.mozilla.org/en-US/docs/Web/JavaScript')}}
+            >
+                <Text style={styles.SocialLinks}>Read More</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
@@ -46,15 +47,61 @@ const ActionCard = () => {
 export default ActionCard
 
 const styles = StyleSheet.create({
-    headingText:{},
-    elevatedCard:{},
-    card:{},
-    headingContainer:{},
-    headerText:{},
+    headingText:{
+        fontSize:24,
+        fontWeight:'bold',
+        paddingHorizontal:8,
+        color:'white'
+    },
+    elevatedCard:{
+        backgroundColor:'#ffffff',
+        elevation:3,
+         shadowOffset:{
+            width:1,
+            height:1
+         },
+         shadowColor:'333',
+         shadowOpacity:0.4,
+
+    },
+    card:{
+        width:340,
+        height:360,
+        borderRadius:6,
+        marginVertical:10,
+        marginHorizontal:12
+    },
+    headingContainer:{
+        height:40,
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center'
+    },
+    headerText:{
+        fontSize:15,
+        fontWeight:'600'
+    },
     cardImage:{
         height:200,
+
     },
-    cardBody:{ },
-    footerBody:{},
-    SocialLinks:{}
+    cardBody:{
+        padding: 10,
+    },
+    footerBody:{
+        padding: 8,
+        flex:1,
+        flexDirection:'row',
+        justifyContent:'space-evenly',
+        alignItems:'center'
+    },
+    SocialLinks:{
+        fontSize:16,
+        color:'#000000',
+        backgroundColor:'lightgrey',
+        paddingHorizontal:20,
+        paddingVertical:8,
+        borderRadius:6
+
+    }
 })
